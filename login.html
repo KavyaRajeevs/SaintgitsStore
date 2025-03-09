@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaintgitsStore - Login</title>
+    <link rel="stylesheet" href="loginstyle.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="brand">SaintgitsStore</a>
+    </header>
+
+    <main class="main-content">
+        <div class="building-image">
+            <img src="saintgits_land.jpg" alt="Saintgits Building">
+        </div>
+        
+        <div class="login-container">
+            <h2 class="login-header">Log in</h2>
+            
+            <!-- Google Sign-In Button -->
+            <div id="googleSignIn"></div>
+        </div>
+    </main>
+
+    <footer class="footer"></footer>
+
+    <!-- Load the Google Identity Services library -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+    <script>
+        function handleCredentialResponse(response) {
+            const idToken = response.credential; 
+            console.log("Google ID Token:", idToken);
+
+            // Decode token (Optional: Debugging purposes)
+            const userInfo = JSON.parse(atob(idToken.split('.')[1]));
+            console.log("User Info:", userInfo);
+
+            // Redirect to homepage or update UI
+            window.location.href = 'home.html';
+        }
+
+        window.onload = function() {
+            google.accounts.id.initialize({
+                client_id: '760072900583-d0o804i2a7ob0uquplh9imeu8r8rgr24.apps.googleusercontent.com',
+                callback: handleCredentialResponse
+            });
+
+            google.accounts.id.renderButton(
+                document.getElementById("googleSignIn"),
+                { theme: "outline", size: "large" } 
+            );
+
+            google.accounts.id.prompt();  
+        };
+    </script>
+
+</body>
+</html>

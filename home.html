@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaintgitsStore - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="homestyle.css">
+    
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="home.html">SaintgitsStore</a>
+            </div>
+            <div class="nav-links">
+                <a href="home.html" class="active">Home</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="search-cart">
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="What are you looking for?">
+                    <span class="search-icon">
+                        <i class="fas fa-search"></i>
+                    </span>
+                </div>
+                <button class="icon-button">
+                    <i class="far fa-heart"></i>
+                </button>
+                <button class="icon-button">
+                    <i class="fas fa-shopping-cart"></i>
+                </button>
+                <div class="profile-button">K</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Categories Section -->
+        <section class="section">
+            <div class="category-heading">
+                <div class="category-indicator"></div>
+                <h3 class="category-title">Categories</h3>
+            </div>
+            <div class="section-header">
+                <h2 class="section-title">Browse By Category</h2>
+                <div class="section-controls">
+                    <button class="control-button">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="control-button">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="categories-grid">
+                <div class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-pen"></i>
+                    </div>
+                    <div class="category-name">Writing Supplies</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-file"></i>
+                    </div>
+                    <div class="category-name">Paper Products</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-thumb-tack"></i>
+                    </div>
+                    <div class="category-name">Notebooks</div>
+                </div>
+                <div class="category-item active">
+                    <div class="category-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="category-name">Art & Craft Supplies</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="category-name">Records</div>
+                </div>
+                <div class="category-item">
+                    <div class="category-icon">
+                        <i class="fas fa-pencil"></i>
+                    </div>
+                    <div class="category-name">Others</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="section">
+            <div class="category-heading">
+                <div class="category-indicator"></div>
+                <h3 class="category-title">Our Products</h3>
+            </div>
+            <div class="section-header">
+                <h2 class="section-title">Explore Our Products</h2>
+                <div class="section-controls">
+                    <button class="control-button">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="control-button">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/pen(blue).jpg" alt="Pen (Blue)" class="product-image">
+                        <div class="product-actions">
+                            <div class="product-action-button">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-action-button">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Pen (Blue)</h3>
+                        <div class="product-price">
+                            <span class="current-price">Rs 10</span>
+                            <span class="review-count">(32)</span>
+                        </div>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/pen(black).jpg" alt="pen(b)" class="product-image">
+                        <div class="product-actions">
+                            <div class="product-action-button">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-action-button">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Pen (Black)</h3>
+                        <div class="product-price">
+                            <span class="current-price">Rs 10</span>
+                            <span class="review-count">(65)</span>
+                        </div>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/pen(red).png" alt="pen(r)" class="product-image">
+                        <div class="product-actions">
+                            <div class="product-action-button">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-action-button">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Pen (Red)</h3>
+                        <div class="product-price">
+                            <span class="current-price">Rs 10</span>
+                            <span class="review-count">(230)</span>
+                        </div>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/Pen(green).jpg" alt="pen(green)" class="product-image">
+                        <div class="product-actions">
+                            <div class="product-action-button">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-action-button">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Pen (Green)</h3>
+                        <div class="product-price">
+                            <span class="current-price">Rs 10</span>
+                            <span class="review-count">(48)</span>
+                        </div>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/ruler(30_cm).webp" alt="ruler_30" class="product-image">
+                        <div class="product-actions">
+                            <div class="product-action-button">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-action-button">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="product-label">NEW</div>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Ruler 30CM</h3>
+                        <div class="product-price">
+                            <span class="current-price">Rs 15</span>
+                            <span class="review-count">(49)</span>
+                        </div>
+                        <div class="color-options">
+                            <div class="color-option" style="background-color: #ff0000;"></div>
+                            <div class="color-option" style="background-color: #0000ff;"></div>
+                        </div>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/steel_ruler.jpg" alt="steel_ruler_15" class="product-image">
+                        <div class="product-actions">
+                            <div class="product-action-button">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-action-button">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="product-label"></div>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Steel Ruler 15CM
+                        </h3>
+                        <div class="product-price">
+                            <span class="current-price">20</span>
+                            <span class="review-count">(76)</span>
+                        </div>
+                        <div class="color-options">
+                            <div class="color-option" style="background-color: #ff0000;"></div>
+                            <div class="color-option" style="background-color: #ffff00;"></div>
+                        </div>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/steel-scaleruler-30-cm-12-.jpg" alt="steel-scaleruler-30-cm-12-" class="product-image">
+                        <div class="product-actions">
+                            <div class="product-action-button">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-action-button">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Steel Ruler 30CM</h3>
+                        <div class="product-price">
+                            <span class="current-price">40</span>
+                            <span class="review-count">(95)</span>
+                        </div>
+                        <div class="color-options">
+                            <div class="color-option" style="background-color: #000000;"></div>
+                            <div class="color-option" style="background-color: #ff0000;"></div>
+                        </div>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/A4(unruled).jpeg" alt="A4_ur" class="product-image">
+                        <div class="product-actions">
+                            <div class="product-action-button">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-action-button">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">A4 Paper Unruled</h3>
+                        <div class="product-price">
+                            <span class="current-price"></span>
+                            <span class="review-count">(55)</span>
+                        </div>
+                        <div class="color-options">
+                            <div class="color-option" style="background-color: #008000;"></div>
+                            <div class="color-option" style="background-color: #ff0000;"></div>
+                        </div>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/Apsara_pencil_pack.jpg" alt="Apsara_pencil_pack" class="product-image">
+                        <div class="product-actions">
+                            <div class="product-action-button">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-action-button">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">apsara pencil pack(10)</h3>
+                        <div class="product-price">
+                            <span class="current-price">Rs 50</span>
+                            <span class="review-count">(55)</span>
+                        </div>
+                        <div class="color-options">
+                            <div class="color-option" style="background-color: #008000;"></div>
+                            <div class="color-option" style="background-color: #ff0000;"></div>
+                        </div>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/classmate_notebook(L).jpg" alt="classmate_notebook" class="product-image">
+                        <div class="product-actions">
+                            <div class="product-action-button">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-action-button">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Classmate Notebook Large</h3>
+                        <div class="product-price">
+                            <span class="current-price">Rs 65</span>
+                            <span class="review-count">(55)</span>
+                        </div>
+                        <div class="color-options">
+                            <div class="color-option" style="background-color: #008000;"></div>
+                            <div class="color-option" style="background-color: #ff0000;"></div>
+                        </div>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/classmate_notebook(s).jpeg" alt="classmate_notebook" class="product-image">
+                        <div class="product-actions">
+                            <div class="product-action-button">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-action-button">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">classmate_notebook small</h3>
+                        <div class="product-price">
+                            <span class="current-price">Rs 40</span>
+                            <span class="review-count">(55)</span>
+                        </div>
+                        <div class="color-options">
+                            <div class="color-option" style="background-color: #008000;"></div>
+                            <div class="color-option" style="background-color: #ff0000;"></div>
+                        </div>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="assets/papergrid_notebook(s).jpeg" alt="papergrid_notebook" class="product-image">
+                        <div class="product-actions">
+                            <div class="product-action-button">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <div class="product-action-button">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">papergrid_notebook</h3>
+                        <div class="product-price">
+                            <span class="current-price">Rs 55</span>
+                            <span class="review-count">(55)</span>
+                        </div>
+                        <div class="color-options">
+                            <div class="color-option" style="background-color: #008000;"></div>
+                            <div class="color-option" style="background-color: #ff0000;"></div>
+                        </div>
+                        <button class="add-to-cart">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+            <button class="view-all-button" onclick="error()">View All Products</button>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content here -->
+    </footer>
+    <div id="toast" class="toast">✔ Product added to cart successfully</div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Handle add to cart button click
+            const addToCartButtons = document.querySelectorAll(".add-to-cart");
+            addToCartButtons.forEach((button) => {
+                button.addEventListener("click", function () {
+                    showToast();
+                });
+            });
+
+            // Function to show toast notification
+            function showToast() {
+                const toast = document.getElementById("toast");
+                toast.classList.add("show");
+                setTimeout(() => {
+                    toast.classList.remove("show");
+                }, 2000);
+            }
+
+            // Handle product image click to navigate to cart.html
+            const productImages = document.querySelectorAll(".product-image");
+            productImages.forEach((image) => {
+                image.addEventListener("click", function () {
+                    window.location.href = "cart.html";
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>

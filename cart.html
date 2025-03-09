@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cartstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="cart-container">
+        <div class="cart-product">
+            <div class="product-image">
+                <img id="product-image" src="assets/pen(blue).jpg" alt="Product Image">
+            </div>
+            <div class="product-details">
+                <h2 id="product-name"></h2>
+                <p class="stock-status"> <span class="in-stock">In Stock</span> </p>
+                <h3 id="product-price"></h3>
+                <p id="product-description"></p>
+                <div class="product-options">
+                    <span>Colours:</span>
+                    <span class="color-option selected"></span>
+                    <span class="color-option"></span>
+                </div>
+                <div class="quantity-control">
+                    <button id="decrease-qty">-</button>
+                    <span id="quantity">1</span>
+                    <button id="increase-qty">+</button>
+                    <button class="buy-now">Buy Now</button>
+                    <button class="wishlist">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+
+</body>
+</html>
