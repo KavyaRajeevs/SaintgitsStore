@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="productstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="home.html">SaintgitsStore</a>
+            </div>
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="search-cart">
+                <button class="icon-button">
+                    <a href="wishlist.html"><i class="far fa-heart"></i></a>
+                </button>
+                <button class="icon-button">
+                    <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                </button>
+                <div class="profile-button">K</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="product-details" id="product-details">
+        <!-- Product details will load here -->
+    </div>
+
+    <script src="home.js"></script>
+    <script>
+    async function fetchProductDetails() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        if (!productId) {
+            console.error('Product ID not found in URL');
+            document.getElementById('product-details').innerHTML = `
+                <div class="error-message">
+                    <p>Error: No product ID specified</p>
+                    <a href="home.html">Return to Home</a>
+                </div>
+            `;
+            return;
+        }
+
+        try {
+            const response = await fetch(`http://localhost:3000/college_store/${productId}`);
+            
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            const product = await response.json();
+
+            if (!product) {
+                throw new Error('Product not found');
+            }
+
+            const productDetailsContainer = document.getElementById('product-details');
+            
+            // Check if stock is 0 or less
+            const stockContent = product.instock > 0 
+                ? `
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity()">-</button>
+                        <input type="number" id="quantity" value="1" min="1" max="${product.instock}">
+                        <button onclick="increaseQuantity()">+</button>
+                    </div>
+                    <p class="stock-info">In Stock: ${product.instock}</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('${product._id}', '${product.name}', ${product.price}, '${product.imageUrl}')">Add to Cart</button>
+                `
+                : `
+                    <p class="stock-info">Out of Stock</p>
+                    <button class="notify-btn" onclick="notifyWhenInStock('${product._id}')">Notify Me</button>
+                `;
+
+            productDetailsContainer.innerHTML = `
+                <div class="product-container">
+                    <h1>${product.name}</h1>
+                    <img src="${product.imageUrl}" alt="${product.name}" class="product-image">
+                    <p class="product-price">Price: ₹${product.price}</p>
+                    ${stockContent}
+                    <div class="product-details-extra">
+                        <p>Company: ${product.company}</p>
+                        <p>Category: ${product.category}</p>
+                        <p>Available Colors: ${product.color.join(', ')}</p>
+                        <p>Size: ${product.size}</p>
+                    </div>
+                </div>
+            `;
+        } catch (error) {
+            console.error('Error fetching product details:', error);
+            document.getElementById('product-details').innerHTML = `
+                <div class="error-message">
+                    <p>Error: Unable to fetch product details</p>
+                    <p>${error.message}</p>
+                    <a href="home.html">Return to Home</a>
+                </div>
+            `;
+        }
+    }
+
+    function increaseQuantity() {
+        let qtyInput = document.getElementById('quantity');
+        let qty = parseInt(qtyInput.value);
+        let maxQty = parseInt(qtyInput.max);
+        
+        if (qty < maxQty) {
+            qtyInput.value = qty + 1;
+        }
+    }
+
+    function decreaseQuantity() {
+        let qty = parseInt(document.getElementById('quantity').value);
+        if (qty > 1) {
+            document.getElementById('quantity').value = qty - 1;
+        }
+    }
+
+    function notifyWhenInStock(productId) {
+        // TODO: Implement notification logic
+        alert('We will notify you when the product is back in stock!');
+        // You might want to add the user's email to a notification list in your backend
+    }
+
+    // Prevent duplicate function call
+    fetchProductDetails();
+    </script>
+</body>
+</html>
